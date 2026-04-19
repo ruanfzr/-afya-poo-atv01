@@ -1,0 +1,15 @@
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.AssemblyInfoInputs.cache
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.AssemblyInfo.cs
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.csproj.CoreCompileInputs.cache
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.sourcelink.json
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\bin\Debug\net10.0\Ex02_Cofre.exe
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\bin\Debug\net10.0\Ex02_Cofre.deps.json
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\bin\Debug\net10.0\Ex02_Cofre.runtimeconfig.json
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\bin\Debug\net10.0\Ex02_Cofre.dll
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\bin\Debug\net10.0\Ex02_Cofre.pdb
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.dll
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\refint\Ex02_Cofre.dll
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.pdb
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\Ex02_Cofre.genruntimeconfig.cache
+C:\Users\ruanm\afya-poo-atv01\Ex02_Cofre\obj\Debug\net10.0\ref\Ex02_Cofre.dll

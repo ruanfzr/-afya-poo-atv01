@@ -1,46 +1,70 @@
-public class Personagem
+﻿using System;
+
+namespace Ex04_RPG
 {
-    public string Nome { get; set; }
-    public string Classe { get; private set; }
-    private int _nivel;
-    private double _vidaActual;
-    private double _vidaMaxima;
-
-    public Personagem(string nome, string classe)
+    class Program
     {
-        Nome = nome;
-        Classe = (classe == "Guerreiro" || classe == "Mago") ? classe : "Guerreiro";
-        _vidaMaxima = Classe == "Guerreiro" ? 150 : 80;
-        _nivel = 1;
-        _vidaActual = _vidaMaxima;
-    }
-
-    public void ReceberDano(double pontos)
-    {
-        _vidaActual -= pontos;
-        if (_vidaActual < 0) _vidaActual = 0;
-    }
-
-    public void Curar(double pontos)
-    {
-        if (_vidaActual > 0)
+        static void Main(string[] args)
         {
-            _vidaActual = Math.Min(_vidaActual + pontos, _vidaMaxima);
+            Personagem p1 = new Personagem("player, o Guerreiro", "Guerreiro");
+            Personagem p2 = new Personagem("Inimigo", "Ogro");
+
+            Console.WriteLine("--- INÍCIO DA BATALHA ---");
+            Console.WriteLine(p1.ToString());
+            Console.WriteLine(p2.ToString());
+
+            Console.WriteLine("\n[Ataque!] player ataca o Inimigo...");
+            p2.ReceberDano(40);
+
+            Console.WriteLine("[Cura] Inimigo tenta se curar...");
+            p2.Curar(10);
+
+            Console.WriteLine("\n--- STATUS FINAL ---");
+            Console.WriteLine(p1.ToString());
+            Console.WriteLine(p2.ToString());
         }
     }
 
-    public void SubirNivel()
+    public class Personagem
     {
-        if (_vidaActual > 0)
-        {
-            _nivel++;
-            _vidaMaxima *= 1.10;
-            _vidaActual = _vidaMaxima;
-        }
-    }
+        public string Nome { get; set; }
+        public string Classe { get; set; }
+        private int _vida;
+        private int _nivel;
 
-    public override string ToString()
-    {
-        return $"{Nome} ({Classe}) - Lvl {_nivel} - HP: {Math.Round(_vidaActual)}/{Math.Round(_vidaMaxima)}";
+        public Personagem(string nome, string classe)
+        {
+            Nome = nome;
+            Classe = classe;
+            _vida = 100;
+            _nivel = 1;
+        }
+
+        public void ReceberDano(int dano)
+        {
+            _vida -= dano;
+            if (_vida < 0) _vida = 0;
+            Console.WriteLine($"{Nome} recebeu {dano} de dano! Vida atual: {_vida}");
+        }
+
+        public void Curar(int quantidade)
+        {
+            if (_vida > 0)
+            {
+                _vida += quantidade;
+                if (_vida > 100) _vida = 100;
+                Console.WriteLine($"{Nome} se curou em {quantidade}. Vida atual: {_vida}");
+            }
+            else
+            {
+                Console.WriteLine($"{Nome} está morto e não pode ser curado!");
+            }
+        }
+
+        public override string ToString()
+        {
+            string status = _vida > 0 ? "Vivo" : "Morto";
+            return $"[{Nome}] Classe: {Classe} | Nível: {_nivel} | HP: {_vida} | Status: {status}";
+        }
     }
 }
